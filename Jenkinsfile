@@ -36,7 +36,8 @@ pipeline {
                     sh "az account set --subscription \$AZURE_SUBSCRIPTION_ID"
 
                     // Create or update resource group and deploy ARM template
-                    sh "az group create --name \$AZURE_RG_NAME --location \$AZURE_LOCATION"
+                    //sh "az group create --name \$AZURE_RG_NAME --location \$AZURE_LOCATION"
+                    sh "az group delete --name \$AZURE_RG_NAME --location \$AZURE_LOCATION"
                     //sh "az deployment group create --resource-group \$AZURE_RG_NAME --template-file \$AZURE_TEMPLATE_FILE --parameters \$AZURE_PARAMETERS_FILE --name \$AZURE_DEPLOYMENT_NAME"
                 }
             }
