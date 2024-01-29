@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        AZURE_RG_NAME = 'Demo-RG'
+        AZURE_RG_NAME = 'Demo-RG-1'
         AZURE_LOCATION = 'EastUS'
         AZURE_TEMPLATE_FILE = '/var/lib/jenkins/workspace/ARM_Demo/arm-template.json'
         AZURE_PARAMETERS_FILE = '/var/lib/jenkins/workspace/ARM_Demo/arm-parameters.json'
@@ -37,7 +37,7 @@ pipeline {
 
                     // Create or update resource group and deploy ARM template
                     sh "az group create --name \$AZURE_RG_NAME --location \$AZURE_LOCATION"
-                    sh "az deployment group create --resource-group \$AZURE_RG_NAME --template-file \$AZURE_TEMPLATE_FILE --parameters \$AZURE_PARAMETERS_FILE --name \$AZURE_DEPLOYMENT_NAME"
+                    //sh "az deployment group create --resource-group \$AZURE_RG_NAME --template-file \$AZURE_TEMPLATE_FILE --parameters \$AZURE_PARAMETERS_FILE --name \$AZURE_DEPLOYMENT_NAME"
                 }
             }
         }
