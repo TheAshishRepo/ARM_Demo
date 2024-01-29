@@ -4,13 +4,13 @@ pipeline {
     environment {
         AZURE_RG_NAME = 'Demo-RG-1'
         AZURE_LOCATION = 'EastUS'
-        AZURE_TEMPLATE_FILE = '/var/lib/jenkins/workspace/ARM_Demo/arm-template.json'
-        AZURE_PARAMETERS_FILE = '/var/lib/jenkins/workspace/ARM_Demo/arm-parameters.json'
-        AZURE_DEPLOYMENT_NAME = 'Demo'
-        AZURE_CLIENT_ID = 'd4689707-a743-4d6b-bbc8-d55a481be5ec'
-        AZURE_CLIENT_SECRET = 'TWo8Q~lmyTtrugz1M6Ylii_JkcAd7G9sW2Y5Ma9O'
-        AZURE_TENANT_ID = 'e3630473-3199-4091-8f2d-bfc939c7a8f0'
-        AZURE_SUBSCRIPTION_ID = 'f0c38c3b-77fd-4828-bb35-c7c22eecb247'
+        AZURE_TEMPLATE_FILE = '${AZURE_TEMPLATE_FILE}'
+        AZURE_PARAMETERS_FILE = '${AZURE_PARAMETERS_FILE}'
+        //AZURE_DEPLOYMENT_NAME = 'Demo'
+        AZURE_CLIENT_ID = '${AZURE_CLIENT_ID}'
+        AZURE_CLIENT_SECRET = '${AZURE_CLIENT_SECRET}'
+        AZURE_TENANT_ID = '${AZURE_TENANT_ID}'
+        AZURE_SUBSCRIPTION_ID = '${AZURE_SUBSCRIPTION_ID}'
 
     }
 
