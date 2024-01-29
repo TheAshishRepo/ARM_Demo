@@ -33,7 +33,7 @@ pipeline {
                     }
 
                     // Set Azure subscription
-                    sh "az account set --subscription \$AZURE_SUBSCRIPTION_ID"
+                    sh "az account set --subscription \${environment.AZURE_SUBSCRIPTION_ID}"
 
                     // Create or update resource group and deploy ARM template
                     sh "az group create --name \$AZURE_RG_NAME --location \$AZURE_LOCATION"
