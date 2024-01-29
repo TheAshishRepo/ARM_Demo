@@ -4,8 +4,8 @@ pipeline {
     environment {
         AZURE_RG_NAME = 'Demo-RG'
         AZURE_LOCATION = 'East US'
-        AZURE_TEMPLATE_FILE = '${env.WORKSPACE}"/arm-template.json'
-        AZURE_PARAMETERS_FILE = '${env.WORKSPACE}"/arm-parameters.json'
+        AZURE_TEMPLATE_FILE = '${env.WORKSPACE}/arm-template.json'
+        AZURE_PARAMETERS_FILE = '${env.WORKSPACE}/arm-parameters.json'
         AZURE_DEPLOYMENT_NAME = 'Demo'
         AZURE_CLIENT_ID = 'd4689707-a743-4d6b-bbc8-d55a481be5ec'
         AZURE_CLIENT_SECRET = 'TWo8Q~lmyTtrugz1M6Ylii_JkcAd7G9sW2Y5Ma9O'
