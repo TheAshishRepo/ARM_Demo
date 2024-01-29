@@ -37,7 +37,7 @@ pipeline {
 
                     // Create or update resource group and deploy ARM template
                     //sh "az group create --name \$AZURE_RG_NAME --location \$AZURE_LOCATION"
-                    sh "az group delete --resource-group \$AZURE_RG_NAME
+                    sh "az group delete --resource-group \$AZURE_RG_NAME"
                     //sh "az deployment group create --resource-group \$AZURE_RG_NAME --template-file \$AZURE_TEMPLATE_FILE --parameters \$AZURE_PARAMETERS_FILE --name \$AZURE_DEPLOYMENT_NAME"
                 }
             }
