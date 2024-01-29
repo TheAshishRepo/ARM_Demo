@@ -19,7 +19,7 @@
       },
       "resourceGroupLocation": {
         "type": "string",
-        "defaultValue": "East US", 
+        "defaultValue": "EastUS", 
         "metadata": {
           "description": "Location for the resource group."
         }

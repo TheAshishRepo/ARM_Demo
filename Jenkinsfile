@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         AZURE_RG_NAME = 'Demo-RG'
-        AZURE_LOCATION = 'East US'
+        AZURE_LOCATION = 'EastUS'
         AZURE_TEMPLATE_FILE = '${env.WORKSPACE}/arm-template.json'
         AZURE_PARAMETERS_FILE = '${env.WORKSPACE}/arm-parameters.json'
         AZURE_DEPLOYMENT_NAME = 'Demo'
