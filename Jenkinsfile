@@ -10,7 +10,7 @@ pipeline {
         AZURE_CLIENT_ID = '${AZURE_CLIENT_ID}'
         AZURE_CLIENT_SECRET = '${AZURE_CLIENT_SECRET}'
         AZURE_TENANT_ID = '${AZURE_TENANT_ID}'
-        AZURE_SUBSCRIPTION_ID = '${AZURE_SUBSCRIPTION_ID}'
+        AZURE_SUBSCRIPTION_ID = 'f0c38c3b-77fd-4828-bb35-c7c22eecb247'
 
     }
 
@@ -33,7 +33,7 @@ pipeline {
                     }
 
                     // Set Azure subscription
-                    sh "az account set --subscription \${environment.AZURE_SUBSCRIPTION_ID}"
+                    sh "az account set --subscription \$AZURE_SUBSCRIPTION_ID"
 
                     // Create or update resource group and deploy ARM template
                     sh "az group create --name \$AZURE_RG_NAME --location \$AZURE_LOCATION"
