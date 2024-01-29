@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        AZURE_RG_NAME = 'Demo-RG-1'
+        AZURE_RG_NAME = 'Demo-RG-2'
         AZURE_LOCATION = 'EastUS'
         AZURE_TEMPLATE_FILE = '${AZURE_TEMPLATE_FILE}'
         AZURE_PARAMETERS_FILE = '${AZURE_PARAMETERS_FILE}'
@@ -10,7 +10,7 @@ pipeline {
         AZURE_CLIENT_ID = '${AZURE_CLIENT_ID}'
         AZURE_CLIENT_SECRET = '${AZURE_CLIENT_SECRET}'
         AZURE_TENANT_ID = '${AZURE_TENANT_ID}'
-        AZURE_SUBSCRIPTION_ID = '${AZURE_SUBSCRIPTION_ID}'
+        AZURE_SUBSCRIPTION_ID = 'f0c38c3b-77fd-4828-bb35-c7c22eecb247'
 
     }
 
