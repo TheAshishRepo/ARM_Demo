@@ -2,7 +2,7 @@ pipeline {
     agent any 
 
     environment {
-        AZURE_RG_NAME = 'Demo-RG-3'
+        AZURE_RG_NAME = 'Demo-RG-3','Demo-RG-2'
         AZURE_LOCATION = 'EastUS'
         AZURE_TEMPLATE_FILE = '${AZURE_TEMPLATE_FILE}'
         AZURE_PARAMETERS_FILE = '${AZURE_PARAMETERS_FILE}'
@@ -36,8 +36,8 @@ pipeline {
                     sh "az account set --subscription \$AZURE_SUBSCRIPTION_ID"
 
                     // Create or update resource group and deploy ARM template
-                    sh "az group create --name \$AZURE_RG_NAME --location \$AZURE_LOCATION"
-                    //sh "az group delete --resource-group \$AZURE_RG_NAME --yes"
+                    //sh "az group create --name \$AZURE_RG_NAME --location \$AZURE_LOCATION"
+                    sh "az group delete --resource-group \$AZURE_RG_NAME --yes"
                     //sh "az deployment group create --resource-group \$AZURE_RG_NAME --template-file \$AZURE_TEMPLATE_FILE --parameters \$AZURE_PARAMETERS_FILE --name \$AZURE_DEPLOYMENT_NAME"
                 }
             }
