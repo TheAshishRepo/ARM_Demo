@@ -7,6 +7,18 @@
       },
       "resourceGroupLocation": {
         "value": "EastUS"  
+      },
+      "storageAccountName": {
+        "value": "DemoStorage"
+      },
+      "webAppName": {
+        "value": "DemoWebApp"
+      },
+      "appServicePlanName": {
+        "value": "Demoappserviceplan"
+      },
+      "location": {
+        "value": "EastUS"
       }
     }
   }

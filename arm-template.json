@@ -8,7 +8,43 @@
         "name": "[parameters('resourceGroupName')]",
         "location": "[parameters('resourceGroupLocation')]",
         "properties": {}
-      }
+      },
+      {
+      "type": "Microsoft.Storage/storageAccounts",
+      "apiVersion": "2019-06-01",
+      "name": "[parameters('storageAccountName')]",
+      "location": "[parameters('location')]",
+      "sku": {
+        "name": "Standard_LRS",
+        "tier": "Standard"
+      },
+      "kind": "StorageV2",
+      "properties": {}
+      },
+      {
+      "type": "Microsoft.Web/sites",
+      "apiVersion": "2019-08-01",
+      "name": "[parameters('webAppName')]",
+      "location": "[parameters('location')]",
+      "kind": "app",
+      "properties": {
+        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('appServicePlanName'))]"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/serverfarms', parameters('appServicePlanName'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.Web/serverfarms",
+      "apiVersion": "2019-08-01",
+      "name": "[parameters('appServicePlanName')]",
+      "location": "[parameters('location')]",
+      "sku": {
+        "tier": "Free",
+        "name": "F1"
+      },
+      "properties": {}
+    }
     ],
     "parameters": {
       "resourceGroupName": {
@@ -23,7 +59,32 @@
         "metadata": {
           "description": "Location for the resource group."
         }
+      },
+      "storageAccountName": {
+      "type": "string",
+      "metadata": {
+        "description": "Name of the storage account."
       }
+    },
+    "webAppName": {
+      "type": "string",
+      "metadata": {
+        "description": "Name of the web app."
+      }
+    },
+    "appServicePlanName": {
+      "type": "string",
+      "metadata": {
+        "description": "Name of the App Service Plan."
+      }
+    },
+    "location": {
+      "type": "string",
+      "defaultValue": "EastUS",  // Default location; change as needed
+      "metadata": {
+        "description": "Location for all resources."
+      }
+    }
     }
   }
   
