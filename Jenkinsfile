@@ -37,7 +37,7 @@ pipeline {
 
                     // Create or update resource group and deploy ARM template
                     //sh "az group create --name \$AZURE_RG_NAME --location \$AZURE_LOCATION"
-                    sh "az deployment group create --resource-group \$AZURE_RG_NAME --template-file /var/lib/jenkins/workspace/ARM_Demo/arm-template.json --parameters /var/lib/jenkins/workspace/ARM_Demo/arm-parameters.json
+                    sh "az deployment group create --resource-group \$AZURE_RG_NAME --template-file /var/lib/jenkins/workspace/ARM_Demo/arm-template.json --parameters /var/lib/jenkins/workspace/ARM_Demo/arm-parameters.json"
                     //sh "az group delete --resource-group \$AZURE_RG_NAME --yes"
                     //sh "az deployment group create --resource-group \$AZURE_RG_NAME --template-file \$AZURE_TEMPLATE_FILE --parameters \$AZURE_PARAMETERS_FILE --name \$AZURE_DEPLOYMENT_NAME"
                 }
