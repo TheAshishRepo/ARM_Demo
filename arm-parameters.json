@@ -9,7 +9,7 @@
         "value": "EastUS"  
       },
       "storageAccountName": {
-        "value": "DemoStorage"
+        "value": "demostorage"
       },
       "webAppName": {
         "value": "DemoWebApp"
