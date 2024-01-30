@@ -80,7 +80,6 @@
     },
     "location": {
       "type": "string",
-      "defaultValue": "EastUS",  // Default location; change as needed
       "metadata": {
         "description": "Location for all resources."
       }
