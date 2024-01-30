@@ -4,14 +4,14 @@
     "resources": [
       {
         "type": "Microsoft.Resources/resourceGroups",
-        "apiVersion": "2022-09-01",
+        "apiVersion": "2019-10-01",
         "name": "[parameters('resourceGroupName')]",
         "location": "[parameters('resourceGroupLocation')]",
         "properties": {}
       },
       {
       "type": "Microsoft.Storage/storageAccounts",
-      "apiVersion": "2022-09-01",
+      "apiVersion": "2019-06-01",
       "name": "[parameters('storageAccountName')]",
       "location": "[parameters('location')]",
       "sku": {
