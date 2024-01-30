@@ -4,7 +4,7 @@
     "resources": [
       {
         "type": "Microsoft.Resources/resourceGroups",
-        "apiVersion": "2019-10-01",
+        "apiVersion": "2019-06-01",
         "name": "[parameters('resourceGroupName')]",
         "location": "[parameters('resourceGroupLocation')]",
         "properties": {}
@@ -23,7 +23,7 @@
       },
       {
       "type": "Microsoft.Web/sites",
-      "apiVersion": "2019-08-01",
+      "apiVersion": "2022-09-01",
       "name": "[parameters('webAppName')]",
       "location": "[parameters('location')]",
       "kind": "app",
@@ -36,7 +36,7 @@
     },
     {
       "type": "Microsoft.Web/serverfarms",
-      "apiVersion": "2019-08-01",
+      "apiVersion": "2022-09-01",
       "name": "[parameters('appServicePlanName')]",
       "location": "[parameters('location')]",
       "sku": {
