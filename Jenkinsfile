@@ -2,7 +2,7 @@ pipeline {
     agent any 
 
     environment {
-        AZURE_RG_NAME = 'Demo-RG-3'
+        AZURE_RG_NAME = 'Demo-RG-2'
         AZURE_LOCATION = 'EastUS'
         AZURE_TEMPLATE_FILE = '${AZURE_TEMPLATE_FILE}'
         AZURE_PARAMETERS_FILE = '${AZURE_PARAMETERS_FILE}'
